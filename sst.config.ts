@@ -11,13 +11,13 @@ const finalDomain = `${BUILD_ID}.${DOMAIN}`;
 export default $config({
 	app(input) {
 		return {
-			name: `ThelyCustomerTemplate${BUILD_ID}`,
+			name: `ThelyCustomerTemplate${BUILD_ID}ZZ`,
 			removal: input?.stage === 'production' ? 'retain' : 'remove',
 			home: 'aws',
 		};
 	},
 	async run() {
-		new sst.aws.Nextjs(`ThelyCustomerTemplate${BUILD_ID}`, {
+		new sst.aws.Nextjs(`ThelyCustomerTemplate${BUILD_ID}ZZ`, {
 			domain: {
 				name: finalDomain,
 				dns: sst.cloudflare.dns({
