@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 47.4% 11.2%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 47.4% 11.2%;
+
+        --border: #2D2D2D;
+        --input: 214.3 31.8% 91.4%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 47.4% 11.2%;
+
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --destructive: 0 100% 50%;
+        --destructive-foreground: 210 40% 98%;
+
+        --ring: 215 20.2% 65.1%;
+
+        --radius: 0.5rem;
+    }
+    :root {
+        --ease-in-quad: cubic-bezier(.55, .085, .68, .53);
+        --ease-in-cubic: cubic-bezier(.550, .055, .675, .19);
+        --ease-in-quart: cubic-bezier(.895, .03, .685, .22);
+        --ease-in-quint: cubic-bezier(.755, .05, .855, .06);
+        --ease-in-expo: cubic-bezier(.95, .05, .795, .035);
+        --ease-in-circ: cubic-bezier(.6, .04, .98, .335);
+
+        --ease-out-quad: cubic-bezier(.25, .46, .45, .94);
+        --ease-out-cubic: cubic-bezier(.215, .61, .355, 1);
+        --ease-out-quart: cubic-bezier(.165, .84, .44, 1);
+        --ease-out-quint: cubic-bezier(.23, 1, .32, 1);
+        --ease-out-expo: cubic-bezier(.19, 1, .22, 1);
+        --ease-out-circ: cubic-bezier(.075, .82, .165, 1);
+
+        --ease-in-out-quad: cubic-bezier(.455, .03, .515, .955);
+        --ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
+        --ease-in-out-quart: cubic-bezier(.77, 0, .175, 1);
+        --ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
+        --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+        --ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
+    }
+    .dark {
+        --background: #000;
+        --foreground: #EDEDED;
+
+        --muted: #666;
+        --muted-foreground: #A1A1A1;
+
+        --accent: #1F1F1F;
+        --accent-foreground: #3291FF;
+
+        --popover: #111;
+        --popover-foreground: #EDEDED;
+
+        --border: #2D2D2D;
+        --input: #2D2D2D;
+
+        --card: #0A0A0A;
+        --card-foreground: #EDEDED;
+
+        --primary: #EDEDED;
+        --primary-foreground: #0A0A0A;
+
+        --secondary: #EDEDED;
+        --secondary-foreground: #0A0A0A;
+
+        --destructive: #FF575E;
+        --destructive-foreground: #330A10;
+
+        --ring: #888;
+
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground font-sans;
+        font-feature-settings: "rlig" 1, "calt" 1;
+        overflow-y: scroll;
+    }
+    .label {
+        @apply text-xs uppercase text-muted-foreground rounded p-1;
+    }
+}
