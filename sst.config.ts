@@ -22,6 +22,11 @@ export default $config({
 				name: finalDomain,
 				dns: sst.cloudflare.dns({
 					zone: CLOUDFLARE_ZONE_ID,
+					transform: {
+						record: {
+							allowOverwrite: true,
+						},
+					},
 				}),
 				redirects: [`www.${finalDomain}`],
 			},
